@@ -1,0 +1,111 @@
+body {
+  zoom:0.5;
+  padding-top: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: aqua;
+  font-family: Arial, sans-serif;
+}
+
+.form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  
+  box-sizing: border-box;
+}
+
+.itemu {
+  margin-bottom: 20px;
+}
+
+.itemu label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.itemu input[type="text"],
+.itemu input[type="tel"],
+.itemu input[type="number"],
+.itemu textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.itemu textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.itemu button[type="submit"] { /* Targeted the submit button specifically */
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Added some margin to separate from the back button */
+}
+
+.itemu button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* NEW STYLES FOR THE BACK BUTTON */
+.itemu button#backButton { /* Target the back button by its ID */
+  background-color: #6c757d; /* A neutral gray color */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.itemu button#backButton:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+}
+/* END NEW STYLES */
+
+header  {
+  
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding-left: 0.5em;
+  border-radius: 0.1em;
+  height: 70px;
+  color:  blueviolet;
+  text-align: left;
+  font-size: 80%;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: device-width;
+  height: 70px;
+  padding-right: 1em;
+}
+
+header img  { 
+  width: 65px;
+  height: 65px;
+}

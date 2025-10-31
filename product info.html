@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width",initial-scale=1.0>
+  <link rel="stylesheet" type="text/css" href="project y.css">
+  <title> Product Info </title>
+</head>
+<body>
+  <header>
+    <img src="/storage/emulated/0/DCIM/IMG_20250727_180440.jpg">
+    <h1> Exclusive Store </h1>
+  </header>
+  
+     <nav class="stuff">
+       <nav class="iteme"><a href="project y.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-150742 (1).png"> </a></nav>
+        <nav class="iteme"><a href="Shoes.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-144841 (1) (1).png"> </a></nav>
+        <nav class="iteme"><a href="Bags.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-145010 (1).png"> </a></nav>
+        <nav class="iteme"><a href="Perfumes.html"> <img src="/storage/emulated/0/DCIM/IMG_20250812_145154.jpg"> </a></nav>
+        <nav class="iteme"><a href="Clothes.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-144910 (2).png"> </a></nav>
+      </nav>
+  
+  <h2> Product </h2>
+  
+  <section>
+    
+    <div class="display0">
+      
+      <div class="itema"> <img  src="">
+      
+    </div>
+    <div class="display">
+      
+      <div class="itema"> <img src=" "> </div>
+      <div class="itema"> <img src=" "> </div>
+      <div class="itema"> <img src=" "> </div>
+      
+    </div>
+  </section>
+  <br>
+  <section>
+    <div class="info"> 
+      <p id="name"  "> <strong> </strong> </p>
+      <p id="info">  </p>
+      <p id="color"> </p>
+      <p id="price">  </p>
+    </div>
+    
+    <br>
+    <div class="add">
+      
+    <a href="order form.html"> <button class="Cart-button1"> <img src="/storage/emulated/0/DCIM/IMG_20250728_012155 (1).jpg"> Order Now </button> </a>
+      <br>
+    <a> <button class="Cart-button1" id="addToCart"> <img src="/storage/emulated/0/DCIM/IMG_20250728_012155 (1).jpg"> Add to Cart </button> </a>
+      
+    </div>
+    
+  </section>
+  
+  <br>
+  
+  <footer>
+    <p> 
+      <strong> Contact Us :</strong>
+      <hr>
+     lightning75@gmail.com 
+     +254712345678 
+    </p>
+  </footer>
+    
+    <script src="Cart.js"></script>
+  
+  <script src="Product Info.js">
+  
+  </script>
+  
+  <script type="module">
+  
+  let savedProdId = sessionStorage.getItem('sprodId');
+  import prods from './Product Info.js'
+  let prod = prods.find( function ( prodId ){
+    
+     return prodId.prodId === savedProdId
+    
+  })
+  
+  if (prod){
+  sessionStorage.setItem( 'name', prod.name );
+  sessionStorage.setItem( 'info', prod.info );
+  sessionStorage.setItem( 'price', prod.price );
+  sessionStorage.setItem( 'prodId', prod.prodId );
+  sessionStorage.setItem( 'color', prod.color );
+  }else{ 
+    
+  };
+  
+  </script>
+  
+  <script>
+  
+    //Display
+ function update(){
+   
+let importedProdId = sessionStorage.getItem('prodId');
+let importedName = sessionStorage.getItem('name');
+let importedPrice = sessionStorage.getItem('price');
+let importedInfo = sessionStorage.getItem('info');
+let importedColor = sessionStorage.getItem('color');
+let savedImageSrc = sessionStorage.getItem('acces');
+let savedPrice = sessionStorage.getItem('price');
+let savedProdId = sessionStorage.getItem('sprodId');
+let displayImage = document.querySelectorAll('.itema img');
+let price = document.getElementById('price');
+let nameElement = document.querySelector('#name strong');
+let info = document.getElementById('info');
+let color = document.getElementById('color');
+
+  if ( savedProdId === importedProdId ){
+  if ( savedImageSrc && displayImage ) {
+    
+   displayImage.forEach( function (image){
+   image.src = savedImageSrc
+   })
+  price.innerHTML = importedPrice;
+  info.innerHTML = importedInfo;
+  nameElement.innerHTML = importedName;
+  color.innerHTML = importedColor;
+  sessionStorage.setItem('importedName',importedName);
+} else {
+
+}
+}
+ }
+  update()
+ setInterval( update,500 ) 
+ 
+  //Cart 
+    
+    let addToCartBtn = document.getElementById('addToCart');
+    let savedImageSrc = sessionStorage.getItem('acces');
+    let importedPrice = sessionStorage.getItem('price');
+       addToCartBtn.addEventListener('click', function addtocart(){
+          window.prodPosition = 1 ; 
+          localStorage.setItem('cartImgSrc', savedImageSrc); // fix variable name
+          localStorage.setItem('cartPrice', importedPrice);
+          addToCartBtn.innerHTML = "Added To Cart";
+          addToCartBtn.style.backgroundColor = "yellow";
+         
+})
+    
+  </script>
+</body>
+</html>

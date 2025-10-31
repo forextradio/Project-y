@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width",initial-scale=1.0>
+  <title> Bags </title>
+  <link rel="stylesheet" type="text/css" href="project y.css">
+</head>
+<body>
+  <header>
+    <img src="/storage/emulated/0/DCIM/IMG_20250727_180440.jpg">
+  <h1> Shop Y </h1>
+  </header>
+  
+      <nav class="stuff">
+        <nav class="iteme"><a href="project y.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-150742 (1).png"> </a></nav>
+        <nav class="iteme"><a href="Shoes.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-144841 (1) (1).png"> </a></nav>
+        <nav class="iteme"><a href="Perfumes.html"> <img src="/storage/emulated/0/DCIM/IMG_20250812_145154.jpg"> </a></nav>
+        <nav class="iteme"><a href="Clothes.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-144910 (2).png"> </a></nav>
+      </nav>
+  
+  <div class="slide-panel">
+        <button class="slide-panel-button"> < </button>        
+        <button class="Cart-button"> <a href="cart-page.html"> <img src="/storage/emulated/0/DCIM/IMG_20250728_012155 (1).jpg"> </a></button>
+        <div class="slide-panel-list">
+            
+            <h4> Categories </h4>
+      <ul>
+        <li> Men </li>
+          <br>
+        <li> Women</li>
+        <br>
+        <li> Children </li>
+      </ul>
+      
+    </div>
+      
+    </div>
+    
+  <h2> Bags </h2>
+  
+  <section class="brands">
+    <div class="brands">
+      <div class="itemb">
+        <img src="/storage/emulated/0/Download/gucci-logo-gold.jpg">
+        
+      </div>
+      <div class="itemb">
+        <img src="/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/IMG-20250818-WA0004.jpg">
+        
+      </div>
+      <div class="itemb">
+        <img src="/storage/emulated/0/Download/louis-vuitton-cover (1).png">
+        
+      </div>
+      <div class="itemb">
+        <img src="/storage/emulated/0/Download/vector-logos-collection-most-famous-fashion-brands-world-format-available-illustrator-ai-balenciaga-logo-129651114.jpg">
+        
+      </div>
+    </div>
+  </section>
+  
+  
+  <section>
+    <div class="mainS">
+    
+    <div class="item"> 
+        
+        <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250725-232316.jpg"> 
+      <p> Bag A </p>
+      <p2> Ksh 5000 </p2>
+      </div>
+      <div class="item"> 
+        
+        <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250726-092651.jpg"> 
+        <p> Bag B </p>
+        <p2> Ksh 4500 </p2>
+      </div>
+      <div class="item"> 
+        
+        <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250726-092813.jpg"> 
+        <p> Bag C </p>
+        <p2> Ksh 4000</p2>
+      </div>
+      <div class="item"> 
+        
+        <img src="/storage/emulated/0/DCIM/IMG_20250725_234957.jpg"> 
+        <p> Bag D </p>
+        <p2> Ksh 3500 </p2>
+      </div>
+      <div class="item"> 
+        
+        <img src="/storage/emulated/0/DCIM/IMG_20250725_230440.jpg"> 
+        <p> Bag E</p>
+        <p2> Ksh 3000</p2>
+      </div>
+      <div class="item"> 
+        
+        <img src=""> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg">
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg">
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+      <div class="item"> 
+        
+        <img src=",,,.jpeg"> 
+        
+      </div>
+    
+  </section>
+    <footer>
+    
+    <p> <strong> Contact Us :</strong></p>
+    <p> lightning75@gmail.com </p>
+    <p> +254712345678 </p>
+    
+  </footer>
+    
+  </div>
+  
+  <script>
+  let images = document.querySelectorAll('.item img');
+
+  images.forEach(function(image) {
+    image.addEventListener('click', function(event) {
+      event.preventDefault();
+      sessionStorage.setItem('acces', this.src);
+      window.location.href = "product info.html";
+    });
+  });
+    
+    //Button
+
+     let slideButton = document.querySelector('.slide-panel-button');
+     let slidePanel = document.querySelector('.slide-panel');
+     
+
+    slideButton.addEventListener( 'click',function slide(){
+    
+    slidePanel.classList.add('open');
+    
+  })
+      // Slide back
+
+    slidePanel.addEventListener( 'touchmove',function back(){
+      
+      slidePanel.classList.remove('open');
+    });
+    
+  </script>
+  
+</body>
+</html>

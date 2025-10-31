@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width",initial-scale= 1.0>
+  <link rel="stylesheet" type= "text/css" href="project y.css">
+  
+</head>
+<body>
+   <header class="header">
+      
+      <img src="/storage/emulated/0/DCIM/IMG_20250727_180440.jpg" />
+      <h1>Exclusive Store</h1>
+      
+    </header>
+  
+      <nav class="stuff">
+       <nav class="iteme"><a href="project y.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-150742 (1).png"> </a></nav>
+        <nav class="iteme"><a href="Shoes.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-144841 (1) (1).png"> </a></nav>
+        <nav class="iteme"><a href="Bags.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-145010 (1).png"> </a></nav>
+        <nav class="iteme"><a href="Perfumes.html"> <img src="/storage/emulated/0/DCIM/IMG_20250812_145154.jpg"> </a></nav>
+        <nav class="iteme"><a href="Clothes.html"> <img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20250812-144910 (2).png"> </a></nav>
+      </nav>
+  
+  <h2> Shoping Cart </h2>
+  <section class="orders">
+    <div class="mainS1">
+        <div class="item">
+          <img class="image" id="prod1" src="/storage/emulated/0/DCIM/IMG_20250725_231642.jpg" />
+          <p>Buggy Jeans</p>
+          <p2>Ksh 1,500</p2>
+        </div>
+        <div class="item">
+          <img class="image" id="prod2" src="/storage/emulated/0/DCIM/IMG_20250725_231419.jpg" />
+          <p>Chanel Heels</p>
+          <p2>Ksh 4,500</p2>
+        </div>
+        <div class="item">
+          <img class="image" id="prod3" src="/storage/emulated/0/DCIM/IMG_20250725_234637.jpg" />
+          <p>Chanel Perfume</p>
+          <p2>Ksh 8,500</p2>
+        </div>
+        <div class="item">
+          <img class="image" id="prod4" src="/storage/emulated/0/DCIM/IMG_20250725_234957.jpg" />
+          <p>Monkey Bag</p>
+          <p2>Ksh 1,500</p2>
+        </div>
+        <div class="item">
+          <img class="image" id="prod5" src="/storage/emulated/0/DCIM/IMG_20250725_234753.jpg" />
+          <p>Lakers Attire</p>
+          <p2>Ksh 1,200</p2>
+        </div>
+        <div class="item">
+          <img class="image" id="prod6" src="/storage/emulated/0/DCIM/IMG_20250725_234859.jpg" />
+          <p>Bape Sta</p>
+          <p2>Ksh 3,500</p2>
+        </div>
+          
+      </section>
+
+  </section>
+  
+  <script src="Cart.js"> </script>
+  
+  <script>
+  
+  let keys = Object.keys( localStorage );
+  let prod1Img = document.getElementById('prod1')
+  let prod2Img = document.getElementById('prod2')
+  let prod3Img = document.getElementById('prod3')
+  let prod4Img = document.getElementById('prod4')
+  let cartImageSrc = localStorage.getItem('cartImgSrc')
+  function update(){
+    
+    prod1Img.src = cartImageSrc
+    
+  }
+  update()
+  
+  </script>
+</body>
+</html>

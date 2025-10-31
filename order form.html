@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width",initial-scale=1.0>
+  <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+  
+  <header>
+    
+    <img src="/storage/emulated/0/DCIM/IMG_20250727_180440.jpg">
+    <h1> Exclusive Store </h1>
+    
+  </header>
+  
+  <section>
+
+ <div class="form">
+  <form id="order-form">
+    <div class="itemu">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="itemu">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div>
+      
+      <p id="name"> </p>
+      
+    </div>
+
+    <div class="itemu">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" required>
+    </div>
+
+    <div class="itemu">
+      <label for="address">Delivery Address/City/Street:</label>
+      <textarea id="address" name="address" required></textarea>
+    </div>
+
+    <div class="itemu">
+      <button type="submit">Place Order</button>
+    </div>
+
+    <div class="itemu">
+      <button type="button" id="backButton">Back</button>
+    </div>
+    </form>
+</div>
+
+<script>
+  const form = document.getElementById('order-form');
+  const backButton = document.getElementById('backButton'); // Get the back button
+  let importedName = sessionStorage.getItem('importedName');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const product = document.getElementById('product').value;
+    const quantity = document.getElementById('quantity').value;
+    const address = document.getElementById('address').value;
+
+    const message = `New Order: Name: ${name}, Phone: ${phone}, Product: ${product}, Quantity: ${quantity}, Address: ${address}`;
+
+    const whatsappUrl = `https://wa.me/+254116733806?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank');
+  });
+    
+    let name.innerHTML = importedName;
+
+  // NEW JAVASCRIPT FOR BACK BUTTON
+  backButton.addEventListener('click', () => {
+    window.history.back(); // This navigates to the previous page in the browser's history
+  });
+  
+</script>
+  </section>
+</body>
+</html>
